@@ -1,0 +1,11 @@
+application.properties
+.mvn
+.settings
+target
+target/*
+target/**
+.classpath
+.project
+HELP.md
+mvnw
+mvnw.cmd
