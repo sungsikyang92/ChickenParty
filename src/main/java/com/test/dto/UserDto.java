@@ -1,7 +1,6 @@
 package com.test.dto;
 
 
-
 public class UserDto {
 
 	private String userId;
@@ -9,10 +8,11 @@ public class UserDto {
 	private String userNm;
 	private String userAddr;
 	private String userTel;
+
 	public UserDto() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+	
 	public UserDto(String userId, String userPw, String userNm, String userAddr, String userTel) {
 		super();
 
@@ -29,6 +29,7 @@ public class UserDto {
 		this.userAddr = userAddr;
 		this.userTel = userTel;
 	}
+	
 	public String getUserId() {
 		return userId;
 	}
@@ -59,5 +60,4 @@ public class UserDto {
 	public void setUserTel(String userTel) {
 		this.userTel = userTel;
 	}
-
 }

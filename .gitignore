@@ -9,3 +9,8 @@ target/**
 HELP.md
 mvnw
 mvnw.cmd
+<<<<<<< HEAD
+=======
+/.metadata/
+Servers
+>>>>>>> e6bb751bfd5a5c80242bb05be89247cc2449d0d0

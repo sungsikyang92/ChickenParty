@@ -6,26 +6,33 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.test.Order.Service.OrderService;
 import com.test.Product.Service.ProductService;
+import com.test.dto.OrderDto;
 
 @Controller
-@RequestMapping("/product")
-public class ProductController {
+@RequestMapping("/order")
+public class OrderController {
 
 	@Autowired
 	private ProductService productService;
 
-	@GetMapping("/userlist")
-	public String userList(Model model, String userid) {
+	@Autowired
+	private OrderService orderService;
+
+	@GetMapping("/orderlist")
+	public String order(Model model, String userid, OrderDto dto) {
+		
+		int res = (orderService.getOrder(dto));
+		
 		model.addAttribute("product", productService.getStoredList(userid));
 		return "storedList";
 	}
-
-	@GetMapping("/adminlist")
-	public String adminList(Model model) {
-		model.addAttribute("product", productService.getStoredByUser());
-		return "storedListByUser";
-	}  
+	 
+	@GetMapping("/orderinfo")
+	public String orderinfo(Model model) {
+		model.addAttribute("product",orderService.OrderInfo());
+		return "orderInfo";
+	}
 
 }
-
