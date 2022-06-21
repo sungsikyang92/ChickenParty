@@ -4,7 +4,10 @@ public class ProductDto {
 	public ProductDto() {
 		super();
 	}
+
 	public ProductDto(String proKey, int proPrice, int proCnt, String proNm) {
+
+	
 		super();
 		this.proKey = proKey;
 		this.proPrice = proPrice;
@@ -15,7 +18,10 @@ public class ProductDto {
 	public String toString() {
 		return "ProductDto [proKey=" + proKey + ", proPrice=" + proPrice + ", proCnt=" + proCnt + ", proNm=" + proNm
 				+ "]";
+
 	} 
+
+
 	public String getProKey() {
 		return proKey;
 	}
@@ -34,15 +40,21 @@ public class ProductDto {
 	public void setProCnt(int proCnt) {
 		this.proCnt = proCnt;
 	}
+
 	public String getProNm() {
 		return proNm;
 	}
 	public void setProNm(String proNm) {
 		this.proNm = proNm;
 	}
+	
+
+
+
 	private String proKey;
 	private int proPrice;
 	private int proCnt;
+
 	private String proNm;
 	private String proNm1;
 	private String proNm2;

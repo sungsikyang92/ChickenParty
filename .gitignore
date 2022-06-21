@@ -9,3 +9,6 @@ target/**
 HELP.md
 mvnw
 mvnw.cmd
+/.metadata/
+Servers
+pom.xml
