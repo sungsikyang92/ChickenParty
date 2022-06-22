@@ -1,28 +1,33 @@
 package com.test.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.test.dao.UserDao;
 import com.test.dto.UserDto;
+import com.test.user.mapper.UserMapper;
 
 @Service
 
 public class UserServiceImpl implements UserService{
-	
 
- 	
 	@Autowired
-	private UserDao dao;
-
+	UserMapper userMapper;
+	
 	@Override
-	public UserDto login(UserDto dto) {
-		return dao.login(dto);
+	public List<UserDto> info() {
+		
+		return userMapper.info();
 		
 	}
 
 	@Override
-	public int insert(UserDto dto) {
-		return dao.insert(dto);
+	public UserDto infoChain(String userId) {
+		return userMapper.infoChain(userId);
 	}
+	
+
+ 	
+
 }

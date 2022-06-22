@@ -1,8 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -10,26 +9,25 @@
 </head>
 <body>
 
-<h1>LIST PAGE</h1>
+<h1>CHAIN PAGE</h1>
 <table border="1">
 	<tr>
-		<th>NAME</th>
+		<th>STORENAME</th>
 		<th>ADDR</th>
 		<th>TEL</th>
 	</tr>
-<c:forEach items="${list }" var="dto">
+
 		<tr>
-			<td>${dto.userNm}</td>
-			<td>${dto.userAddr}</td>
-			<td>${dto.userTel}</td>
-			
+			<td>${list.userNm}</td>
+			<td>${list.userAddr}</td>
+			<td>${list.userTel}</td>
 		</tr>
-</c:forEach>
+		
 	<tr>
 		<td colspan="3" align="right">
 			<button onclick="location.href='welcome'">뒤로가기</button>
 		</td>
 	</tr>
-</table>
+</table> 
 </body>
 </html>

@@ -8,12 +8,12 @@
 </head>
 <body>
 <h2>${errorMsg }</h2>
-<form method="post">
+<form action="login" method="post">
 	<input type="text" name="userId" placeholder="User ID">
 	<br>
 	<input type="password" name="userPw" placeholder="User PW">
 	<br>
-	<button>Submit</button>	
+	<input type="submit" value="로그인">
 </form>
 </body>
 </html>

@@ -24,8 +24,8 @@ table{
 
 	<div id="main_div">
 		<table border="1"
-			class="table table-condensed table-bordered table-hover"
-			method="post">
+			class="table table-condensed table-bordered table-hover">
+			
 			<tr>
 				<th>글번호</th>
 				<td>${boardDto.board_seq }

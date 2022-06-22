@@ -13,6 +13,12 @@ public class UserDto {
 		super();
 	}
 	
+	public UserDto(String userId, String userPw) {
+		super();
+		this.userId = userId;
+		this.userPw = userPw;
+	}
+
 	public UserDto(String userId, String userPw, String userNm, String userAddr, String userTel) {
 		super();
 
