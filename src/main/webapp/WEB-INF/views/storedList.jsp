@@ -11,10 +11,44 @@
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
 <title>Insert title here</title>
+<style type="text/css">
+table{
+	margin-left:50px;
+	margin-top:50px;
+	width: 500px;
+	
+}
+#order_btn{
+	width: 50px;
+	height: 38px;
+	border-style: none;
+}
+#order_tr{
+	width: 150px;
+}
+#location_list{
+	 font-weight: bolder;
+	 font-size: 20px;
+	 position: absolute;
+	 margin-top: 30px;
+	 margin-left: 450px;
+}
+#order_btn2{
+	background-color: #0054FF;
+	color:white;
+	border-style: none;
+	border-radius: 3px;
+	padding :7px;
+	position: absolute;
+}
+}
+</style>
 </head>
 <body>
-	<h1 style="text-align: center;">${param.userid }재고목록</h1>
+<%@ include file="./template/header.jsp" %>
+ <%@ include file="./template/navbar.jsp" %>
  
+	<span id="location_list"style="text-align: center;">${param.userid }재고목록</span>
 	<div class="container">
 		<table class="table table-striped">
 			<thead>
@@ -23,7 +57,7 @@
 					<th scope="col">상품명</th>
 					<th scope="col">남은수량</th>
 					<th scope="col">가격</th>
-					<th scope="col">주문</th>
+					<th id="order_tr" scope="col">주문</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -41,13 +75,10 @@
 									<td>${dto.proNm }</td>
 									<td>${dto.proCnt }</td>
 									<td>${dto.proPrice }</td>
-									<td><div class="input-group mb-3">
-											<input type="text" class="form-control" style="width: 1px;"
-												name="proCnt">
-											<div class="input-group-append">
-												<button class="btn btn-primary" type="submit">주문</button>
-											</div>
-										</div>
+									<td>
+											<input id="order_btn"type="text"name="proCnt">
+											<button id="order_btn2" type="submit">주문</button>
+											
 									</td>
 								</tr>
 							</form>

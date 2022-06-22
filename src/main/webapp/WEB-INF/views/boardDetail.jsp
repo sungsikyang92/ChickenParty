@@ -11,17 +11,27 @@
 <style type="text/css">
 #main_div {
 	margin-left: 400px;
-	margin-top: 200px;
+	margin-top: 20px;
+	position: absolute;
 }
 table{
-	margin-left: 150px;
+	margin-left:50px;
+	margin-top:50px;
+	width: 700px;
+}
+#location_list{
+	 font-weight: bolder;
+	 font-size: 20px;
+	 position: absolute;
+	 margin-top: 30px;
+	 margin-left: 450px;
 }
 </style>
 </head>
 <body>
 	<%@ include file="./template/header.jsp"%>
 	 <%@ include file="./template/navbar.jsp"%>
-
+<span id="location_list" style="text-align: center;">공지사항 글쓰기</span>
 	<div id="main_div">
 		<table border="1"
 			class="table table-condensed table-bordered table-hover">
@@ -36,7 +46,7 @@ table{
 			</tr>
 			<tr>
 				<th>공지사항내용</th>
-				<td><textarea rows="10" cols="60" readonly="readonly">${boardDto.board_content }</textarea>
+				<td><textarea rows="10" cols="120" readonly="readonly">${boardDto.board_content }</textarea>
 			</tr>
 			<tr>
 				<th>MYDATE</th>

@@ -11,20 +11,27 @@
 <style type="text/css">
 #main_div {
 	margin-left: 400px;
-	margin-top: 200px;
+	margin-top: 20px;
+	position: absolute;
 }
 table{
-	margin-left: 150px;
+	margin-left:50px;
+	margin-top:50px;
+	width: 700px;
 }
-textarea {
-	border-style: none;
+#location_list{
+	 font-weight: bolder;
+	 font-size: 20px;
+	 position: absolute;
+	 margin-top: 30px;
+	 margin-left: 450px;
 }
 </style>
 </head>
 <body>
 	<%@ include file="./template/header.jsp"%>
 	 <%@ include file="./template/navbar.jsp"%>
-
+<span id="location_list" style="text-align: center;">공지사항 글쓰기</span>
 	<div id="main_div">
 	<form action="updateBoard" method="post">
 	<input type="hidden" name="board_seq" value="${dto.board_seq}">
@@ -37,7 +44,7 @@ textarea {
 			</tr>
 			<tr>
 				<th>공지사항 내용</th>
-				<td><textarea rows="10" cols="60" name="board_content">${dto.board_content }</textarea></td>
+				<td><textarea rows="10" cols="120" name="board_content">${dto.board_content }</textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">

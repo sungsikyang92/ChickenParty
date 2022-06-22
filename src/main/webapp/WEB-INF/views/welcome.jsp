@@ -20,7 +20,7 @@
 	<br>
 	<span><a  onclick="location.href='mylist'">본점가게정보확인</a></span>
 	<br><br>
-	<span><a onclick="">주문정보확인</a></span>
+	<span><a onclick="location.href='/order/orderinfo'">주문정보확인</a></span>
 	<br><br>
 	<span><a onclick="">매출확인</a></span>
 </body>

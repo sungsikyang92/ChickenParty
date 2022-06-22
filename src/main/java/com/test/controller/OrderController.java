@@ -6,9 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.test.Order.Service.OrderService;
-import com.test.Product.Service.ProductService;
 import com.test.dto.OrderDto;
+import com.test.service.OrderService;
+import com.test.service.ProductService;
 
 @Controller
 @RequestMapping("/order")
