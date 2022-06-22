@@ -31,8 +31,8 @@ public class BoardController {
 	
 	//공지사항 디테일 조회
 	@GetMapping("/boardDetail")
-	public String getBoardDetail(Model model, int board_seq) {
-		model.addAttribute("boardDto",boardService.getBoardDetail(board_seq));
+	public String getBoardDetail(Model model, int boardSeq) {
+		model.addAttribute("boardDto",boardService.getBoardDetail(boardSeq));
 		return "boardDetail";
 	}
 	
@@ -49,7 +49,7 @@ public class BoardController {
 		System.out.println(boardDto.toString());
 		int res= boardService.insertBoard(boardDto);
 		if(res>0) {
-			return "redirect:boardList";
+			return "redirect:boardList?userId="+boardDto.getUserId();
 		}else {
 			return "insertBoardForm";
 		}
@@ -57,9 +57,9 @@ public class BoardController {
 	
 	//공지사항 글수정폼
 	@RequestMapping("/updateBoardForm")
-	public String updateBoardForm(Model model,int board_seq) {
+	public String updateBoardForm(Model model,int boardSeq) {
 		System.out.println("글수정폼");
-		model.addAttribute("dto",boardService.getBoardDetail(board_seq));
+		model.addAttribute("dto",boardService.getBoardDetail(boardSeq));
 		return "updateBoard";
 	}
 	
@@ -72,18 +72,18 @@ public class BoardController {
 		if(res>0) {
 			return "redirect:boardList";
 		}else{
-			return "redirect:updateBoardForm?board_seq="+boardDto.getBoard_seq();
+			return "redirect:updateBoardForm?board_seq="+boardDto.getBoardSeq();
 		}
 	}
 	
 	//공지사항 삭제
 	@RequestMapping("deleteBoard")
-	public String deleteBoard(int board_seq) {
-		int res=boardService.deletetBoard(board_seq);
+	public String deleteBoard(int boardSeq,BoardDto boardDto) {
+		int res=boardService.deletetBoard(boardSeq);
 		if(res>0) {
-			return "redirect:boardList";
+			return "redirect:boardList?userId="+boardDto.getUserId();
 		}else {
-			return "redirect:boardDetail?board_seq="+board_seq;
+			return "redirect:boardDetail?board_seq="+boardSeq+"&userId="+boardDto.getUserId();
 		}
 	}
 	

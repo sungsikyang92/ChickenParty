@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style type="text/css">
 #main_div {
 	margin-left: 400px;
@@ -27,6 +28,14 @@ table{
 	 margin-left: 450px;
 }
 </style>
+<script type="text/javascript">
+var userId="${param.userId}";
+$(function(){
+	if(userId=="admin"){
+		$(".hide_btn").show();
+	}
+});
+</script>
 </head>
 <body>
 	<%@ include file="./template/header.jsp"%>
@@ -38,26 +47,25 @@ table{
 			
 			<tr>
 				<th>글번호</th>
-				<td>${boardDto.board_seq }
+				<td>${boardDto.boardSeq }
 			</tr>
 			<tr>
 				<th>공지사항제목</th>
-				<td>${boardDto.board_title }
+				<td>${boardDto.boardTitle }
 			</tr>
 			<tr>
 				<th>공지사항내용</th>
-				<td><textarea rows="10" cols="120" readonly="readonly">${boardDto.board_content }</textarea>
+				<td><textarea rows="10" cols="120" readonly="readonly">${boardDto.boardContent }</textarea>
 			</tr>
 			<tr>
 				<th>MYDATE</th>
-				<td>${boardDto.board_date }
+				<td>${boardDto.boardDate }
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><input type="button" value="수정"
-					onclick="location.href='updateBoardForm?board_seq=${boardDto.board_seq}'"> <input
-					type="button" value="삭제"
-					onclick="location.href='deleteBoard?board_seq=${boardDto.board_seq}'"> <input
-					type="button" value="목록" onclick="location.href='/board/boardList'">
+				<td colspan="2" align="center">
+				<input style="display:none;" type="button" class="hide_btn" value="수정" onclick="location.href='updateBoardForm?boardSeq=${boardDto.boardSeq}&userId=${param.userId }'">
+				<input style="display:none;" type="button" class="hide_btn" value="삭제" onclick="location.href='deleteBoard?boardSeq=${boardDto.boardSeq}&userId=${param.userId }'">
+				<input type="button" value="목록" onclick="location.href='/board/boardList?userId=${param.userId}'">
 				</td>
 			</tr>
 		</table>

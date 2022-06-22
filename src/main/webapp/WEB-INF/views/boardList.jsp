@@ -8,7 +8,9 @@
 <title>Insert title here</title>
  <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style type="text/css">
+
 #main_div{
 	margin-left: 400px;
 	margin-top: 20px;
@@ -35,9 +37,16 @@ tr{
 	 margin-left: 450px;
 }
 </style>
+<script>
+	var userId="${param.userId}";
+	$(function(){
+		if(userId=="admin"){
+			$("#writeBtn").show();
+		}
+	});
+</script>
 </head>
 <body>
-
  <%@ include file="./template/header.jsp" %>
  <%@ include file="./template/navbar.jsp" %>
 <span id="location_list" style="text-align: center;">공지사항</span>
@@ -57,16 +66,16 @@ tr{
 			<c:otherwise>
 				<c:forEach items="${boardDto }" var="boardDto">
 					<tr>
-						<td>${boardDto.board_seq }</td>
-						<td id="titleTd"><a href="boardDetail?board_seq=${boardDto.board_seq}">${boardDto.board_title }</a></td>
-						<td>${boardDto.board_date }</td>
+						<td>${boardDto.boardSeq }</td>
+						<td id="titleTd"><a href="boardDetail?boardSeq=${boardDto.boardSeq}&userId=${param.userId}">${boardDto.boardTitle }</a></td>
+						<td>${boardDto.boardDate }</td>
 					</tr>				
 				</c:forEach>
 			</c:otherwise>
 		</c:choose>
 		<tr>
 				<td colspan="3" align="right">
-					<input type="button" value="글작성" onclick="location.href='insertBoardForm'">
+					<input type="button" id="writeBtn" style="display:none;" value="글작성" onclick="location.href='insertBoardForm?userId=${param.userId}'">
 				</td>
 			</tr>
 	</table>

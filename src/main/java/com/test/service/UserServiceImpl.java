@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.dto.UserDto;
-import com.test.user.mapper.UserMapper;
+import com.test.mapper.UserMapper;
 
 @Service
 

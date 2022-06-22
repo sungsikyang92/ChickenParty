@@ -12,20 +12,20 @@ import com.test.dto.BoardDto;
 
 @Mapper
 public interface BoardMapper {
-	@Select("SELECT board_seq, board_title, board_date FROM board ") 
+	@Select("SELECT boardSeq, boardTitle, boardDate FROM board ") 
 	List<BoardDto> getBoardList();
 	
 	
-	@Select(" SELECT * FROM board WHERE board_seq= #{board_seq} ")
-	BoardDto getBoardDetail(int board_seq);
+	@Select(" SELECT * FROM board WHERE boardSeq= #{boardSeq} ")
+	BoardDto getBoardDetail(int boardSeq);
 	
-	@Insert(" INSERT INTO board VALUES( null, #{board_title}, #{board_content}, now(),null) ")
+	@Insert(" INSERT INTO board VALUES( null, #{boardTitle}, #{boardContent}, now(),'admin') ")
 	int insertBoard(BoardDto dto);
 
-	@Update(" UPDATE board SET board_title= #{board_title}, board_content=#{board_content} where board_seq=#{board_seq}")
+	@Update(" UPDATE board SET boardTitle= #{boardTitle}, boardContent=#{boardContent} where boardSeq=#{boardSeq}")
 	int updatetBoard(BoardDto dto);
 
-	@Delete(" DELETE FROM board WHERE board_seq= #{board_seq} ")
+	@Delete(" DELETE FROM board WHERE boardSeq= #{boardSeq} ")
 	int deletetBoard(int boardSeq);
 	
 }

@@ -1,4 +1,4 @@
-package com.test.user.mapper;
+package com.test.mapper;
 
 import java.util.List;
 

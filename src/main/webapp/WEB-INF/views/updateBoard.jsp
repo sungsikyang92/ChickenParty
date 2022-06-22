@@ -34,17 +34,17 @@ table{
 <span id="location_list" style="text-align: center;">공지사항 글쓰기</span>
 	<div id="main_div">
 	<form action="updateBoard" method="post">
-	<input type="hidden" name="board_seq" value="${dto.board_seq}">
+	<input type="hidden" name="boardSeq" value="${dto.boardSeq}">
 	
 		<table border="1"
 			class="table table-condensed table-bordered table-hover">
 			<tr>
 				<th>공지사항 제목</th>
-				<td><input type="text" name="board_title" value="${dto.board_title}"></td>
+				<td><input type="text" name="boardTitle" value="${dto.boardTitle}"></td>
 			</tr>
 			<tr>
 				<th>공지사항 내용</th>
-				<td><textarea rows="10" cols="120" name="board_content">${dto.board_content }</textarea></td>
+				<td><textarea rows="10" cols="120" name="boardContent">${dto.boardContent }</textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">

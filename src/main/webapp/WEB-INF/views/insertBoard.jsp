@@ -27,19 +27,20 @@ textarea {
 
 	<div id="main_div">
 	<form action="insertBoard" method="post">
+		<input type="hidden" name=userId value="${param.userId}">
 		<table border="1"
 			class="table table-condensed table-bordered table-hover">
 			<tr>
 				<th>공지사항 제목</th>
-				<td><input type="text" name="board_title"></td>
+				<td><input type="text" name="boardTitle"></td>
 			</tr>
 			<tr>
 				<th>공지사항 내용</th>
-				<td><textarea rows="10" cols="60" name="board_content"></textarea></td>
+				<td><textarea rows="10" cols="60" name="boardContent"></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<input type="button" value="취소" onclick="location.href='boardList'">
+					<input type="button" value="취소" onclick="location.href='boardList?userId=${param.userId}'">
 					<input type="submit" value="등록">
 				</td>
 			</tr>

@@ -28,7 +28,7 @@ public class UserController {
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String welcomePage(ModelMap model, UserDto dto) {
 		if(dto.getUserId().equals("admin")&&dto.getUserPw().equals("1234")) {
-			return "redirect:welcome";
+			return "redirect:welcome?userId=admin";
 		}
 		if(dto.getUserId().equals("user1")&&dto.getUserPw().equals("1234")) {
 			UserDto test = userService.infoChain(dto.getUserId());
@@ -44,29 +44,17 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/welcomechain")
-	public String welcomeChain() {
-		return "welcomechain";
+	public String welcomeChain(Model model, String userId,String userNm) {
+		model.addAttribute("list", userService.infoChain(userId));
+		return "StoreInfo";
 	}
 
 	@RequestMapping(value="/welcome")
-	public String welcomPage() {
-		return "welcome";
+	public String welcomPage(Model model) {
+		model.addAttribute("list",  userService.info());
+		return "myStoreInfo";
 	}
 
-	@RequestMapping(value="/mylist", method=RequestMethod.GET)
-	public String listCheck(Model model) {
-		model.addAttribute("list",  userService.info());
-		System.out.println(userService.info());
-		return "mylist";
-	}
-	
-	@RequestMapping(value="/mylistchain", method=RequestMethod.GET)
-	public String CheckOne(Model model, String userId) {
-		model.addAttribute("list", userService.infoChain(userId));
-		return "mylistchain";
-	}
-	
-	
 
 	
 	

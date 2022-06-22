@@ -46,8 +46,9 @@
 </style>
 </head>
 <body>
-		<button name="menu_btn" id="menu1" onclick="location.href='../storeList.jsp'">가게정보확인</button>
-		<button name="menu_btn" id="menu2" onclick="location.href='/product/userlist?userId=${param.userId}'">재고목록확인</button>
-		<button name="menu_btn" id="menu3" onclick="location.href='../storeList.jsp'">매출확인</button>
+		<button name="menu_btn" id="menu1" onclick="location.href='/welcomechain?userId=${param.userId}&userNm=${param.userNm}'">가게정보확인</button>
+		<button name="menu_btn" id="menu2" onclick="location.href='/product/userlist?userId=${param.userId}&userNm=${param.userNm}'">재고목록확인</button>
+		<button name="menu_btn" id="menu3" onclick="location.href='/board/boardList?userId=${param.userId}&userNm=${param.userNm}'">공지사항</button>
+		<!-- <button name="menu_btn" id="menu4" onclick="location.href='../storeList.jsp'">매출확인</button> -->
 </body>
 </html>
