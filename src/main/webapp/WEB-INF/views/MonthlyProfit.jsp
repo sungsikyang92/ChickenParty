@@ -11,14 +11,13 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Month', 'Profits'],
+                ['월', '매출액'],
                 <c:forEach items="${list}" var="dto">
                 ['${dto.month}', ${dto.profit}],
                 </c:forEach>
             ]);
 
             var options = {
-                title: 'MonthlyProfit',
                 curveType: 'function',
                 legend: { position: 'bottom' }
             };
@@ -28,15 +27,36 @@
             chart.draw(data, options);
         }
     </script>
+    <style type="text/css">
+	#curve_chart{
+		position: absolute;
+		margin-left: 400px;
+		margin-top:50px;
+	}
+	#profit_tb{
+		position: absolute;
+		margin-left: 600px;
+		margin-top:550px;
+	}
+	#location_list{
+	 font-weight: bolder;
+	 font-size: 20px;
+	 position: absolute;
+	 margin-top: 30px;
+	 margin-left: 450px;
+}
+</style>
     <meta charset="UTF-8">
     <title>돈좀벌었나~?</title>
 </head>
 <body>
-<table border="1">
+<%@ include file="./template/header.jsp" %>
+ <%@ include file="./template/navbar.jsp" %>
+<span id="location_list" style="text-align: center;">월매출</span>
+<div id="curve_chart" style="width: 900px; height: 500px"></div>
+<table border="1" id="profit_tb">
     <col width="1">
     <col width="50">
-    <col width="100">
-    <col width="200">
     <tr>
         <th>MONTH</th>
         <th>PROFIT</th>
@@ -48,6 +68,6 @@
             </tr>
         </c:forEach>
 </table>
-<div id="curve_chart" style="width: 900px; height: 500px"></div>
+
 </body>
 </html>
