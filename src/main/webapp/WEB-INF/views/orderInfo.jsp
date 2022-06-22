@@ -10,10 +10,27 @@
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
 <title>Insert title here</title>
+<style type="text/css">
+table{
+	margin-left:50px;
+	margin-top:50px;
+	width: 500px;
+	
+}
+#location_list{
+	 font-weight: bolder;
+	 font-size: 20px;
+	 position: absolute;
+	 margin-top: 30px;
+	 margin-left: 450px;
+}
+</style>
 </head>
 <body>
-	<h1 style="text-align: center;">지점별 주문 현황</h1>
+<%@ include file="./template/header.jsp" %>
+ <%@ include file="./template/navbar.jsp" %>
 
+	<span id="location_list" style="text-align: center;">지점별 주문 현황</span>
 	<div class="container">
 		<table class="table table-striped">
 			<thead>
