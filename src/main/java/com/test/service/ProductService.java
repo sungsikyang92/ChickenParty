@@ -1,4 +1,4 @@
-package com.test.Product.Service;
+package com.test.service;
 
 import java.util.List;
 
