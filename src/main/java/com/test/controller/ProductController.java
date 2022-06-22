@@ -17,8 +17,8 @@ public class ProductController {
 	private ProductService productService;
 
 	@GetMapping("/userlist")
-	public String userList(Model model, String userid) {
-		model.addAttribute("product", productService.getStoredList(userid));
+	public String userList(Model model, String userId) {
+		model.addAttribute("product", productService.getStoredList(userId));
 		return "storedList";
 	}
 

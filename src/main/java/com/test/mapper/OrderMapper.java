@@ -11,10 +11,10 @@ import com.test.dto.OrderDto;
 @Mapper
 public interface OrderMapper {
 	
-	@Insert(" INSERT INTO ORDERS VALUES(#{userid}, #{proKey}, #{proCnt}) ")
+	@Insert(" INSERT INTO ORDERS VALUES(#{userId}, #{proKey}, #{proCnt}, #{userNm}) ")
 	int getOrder(OrderDto dto);
 	
-	@Select("select userid as prokey"
+	@Select("select usernm as usernm"
 			+ " , max(case when prokey = 'A1' then procnt End) as pronm "
 			+ " , max(case when prokey = 'A2' then procnt End) as pronm1 "
 			+ " , max(case when prokey = 'A3' then procnt End) as pronm2 "
@@ -24,7 +24,7 @@ public interface OrderMapper {
 			+ " , max(case when prokey = 'C1' then procnt End) as pronm6 "
 			+ " , max(case when prokey = 'C2' then procnt End) as pronm7 "
 			+ " , max(case when prokey = 'D1' then procnt End) as pronm8 "
-			+ " from(select * from orders)o group by userid")
+			+ " from(select * from orders)o group by usernm")
 	List<OrderDto> OrderInfo();
  
 }

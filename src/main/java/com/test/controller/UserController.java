@@ -31,8 +31,13 @@ public class UserController {
 			return "redirect:welcome";
 		}
 		if(dto.getUserId().equals("user1")&&dto.getUserPw().equals("1234")) {
-			return "redirect:welcomechain?userId=" +dto.getUserId();
+			UserDto test = userService.infoChain(dto.getUserId());
+			return "redirect:welcomechain?userId=" +dto.getUserId() + "&userNm=" + test.getUserNm();
 		}
+		if(dto.getUserId().equals("user2")&&dto.getUserPw().equals("1234")) {
+			UserDto test = userService.infoChain(dto.getUserId());
+			return "redirect:welcomechain?userId=" +dto.getUserId() + "&userNm=" + test.getUserNm();
+	      }
 		model.put("errorMsg", "Please provide the correct userid and userpw");
 		
 		return "login";

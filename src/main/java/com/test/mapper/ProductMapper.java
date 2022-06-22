@@ -11,9 +11,9 @@ import com.test.dto.ProductDto;
 public interface ProductMapper {
 
 	@Select(" SELECT USER_PRODUCT.PROKEY, USER_PRODUCT.PROPRICE, " + "USER_PRODUCT.PROCNT, USER_PRODUCT.PRONM "
-			+ " FROM USER_PRODUCT INNER JOIN USERS " + " ON USERS.USERID = USER_PRODUCT.USERID "
-			+ " WHERE USERS.USERID = #{userid} ORDER BY USER_PRODUCT.PROKEY")
-	List<ProductDto> getStoredList(String userid);
+			+ " FROM USER_PRODUCT INNER JOIN MYUSER " + " ON MYUSER.USERID = USER_PRODUCT.USERID "
+			+ " WHERE MYUSER.USERID = #{userId} ORDER BY USER_PRODUCT.PROKEY")
+	List<ProductDto> getStoredList(String userId);
 	
 	@Select("select userid as prokey"
 			+ " , max(case when prokey = 'A1' then procnt End) as pronm "

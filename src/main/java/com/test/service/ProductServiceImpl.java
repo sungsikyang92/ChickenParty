@@ -15,8 +15,8 @@ public class ProductServiceImpl implements ProductService {
 	private ProductMapper productMapper;
 
 	@Override
-	public List<ProductDto> getStoredList(String userid) {
-		return productMapper.getStoredList(userid);
+	public List<ProductDto> getStoredList(String userId) {
+		return productMapper.getStoredList(userId);
 	}
 
 	@Override

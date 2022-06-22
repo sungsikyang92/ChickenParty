@@ -21,11 +21,11 @@ public class OrderController {
 	private OrderService orderService;
 
 	@GetMapping("/orderlist")
-	public String order(Model model, String userid, OrderDto dto) {
+	public String order(Model model, String userId, OrderDto dto) {
 		
 		int res = (orderService.getOrder(dto));
 		
-		model.addAttribute("product", productService.getStoredList(userid));
+		model.addAttribute("product", productService.getStoredList(userId));
 		return "storedList";
 	}
 	 

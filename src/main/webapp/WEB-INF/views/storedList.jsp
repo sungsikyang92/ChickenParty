@@ -48,7 +48,7 @@ table{
 <%@ include file="./template/header.jsp" %>
  <%@ include file="./template/navbar.jsp" %>
  
-	<span id="location_list"style="text-align: center;">${param.userid }재고목록</span>
+	<span id="location_list"style="text-align: center;">${param.userNm } 재고목록</span>
 	<div class="container">
 		<table class="table table-striped">
 			<thead>
@@ -69,8 +69,9 @@ table{
 						<c:forEach items="${product }" var="dto">
 							<form action="/order/orderlist" method="get">
 								<tr>
-									<input type="hidden" name="userid" value="${param.userid }">
+									<input type="hidden" name="userId" value="${param.userId }">
 									<input type="hidden" name="proKey" value="${dto.proKey }">
+									<input type="hidden" name="userNm" value="${param.userNm }">
 									<td><b>${dto.proKey }</b></td>
 									<td>${dto.proNm }</td>
 									<td>${dto.proCnt }</td>

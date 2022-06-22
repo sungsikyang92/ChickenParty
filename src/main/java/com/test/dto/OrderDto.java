@@ -1,9 +1,10 @@
 package com.test.dto;
 
 public class OrderDto {
-	private String userid;
+	private String userId;
 	private String proKey;
 	private int proCnt;
+	private String userNm;
 	 
 	private String proNm;
 	private String proNm1;
@@ -20,19 +21,19 @@ public class OrderDto {
 		// TODO Auto-generated constructor stub
 	}
 
-	public OrderDto(String userid, String proKey, int proCnt) {
+	public OrderDto(String userId, String proKey, int proCnt) {
 		super();
-		this.userid = userid;
+		this.userId = userId;
 		this.proKey = proKey;
 		this.proCnt = proCnt;
 	}
 
 	public String getUserid() {
-		return userid;
+		return userId;
 	}
 
 	public void setUserid(String userid) {
-		this.userid = userid;
+		this.userId = userid;
 	}
 
 	public String getProKey() {
@@ -121,6 +122,22 @@ public class OrderDto {
 
 	public void setProNm8(String proNm8) {
 		this.proNm8 = proNm8;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getUserNm() {
+		return userNm;
+	}
+
+	public void setUserNm(String userNm) {
+		this.userNm = userNm;
 	}
 	
 	

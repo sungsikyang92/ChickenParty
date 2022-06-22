@@ -47,7 +47,7 @@
 </head>
 <body>
 		<button name="menu_btn" id="menu1" onclick="location.href='../storeList.jsp'">가게정보확인</button>
-		<button name="menu_btn" id="menu2" onclick="location.href='/product/userlist?userid=${param.userid}'">재고목록확인</button>
+		<button name="menu_btn" id="menu2" onclick="location.href='/product/userlist?userId=${param.userId}'">재고목록확인</button>
 		<button name="menu_btn" id="menu3" onclick="location.href='../storeList.jsp'">매출확인</button>
 </body>
 </html>

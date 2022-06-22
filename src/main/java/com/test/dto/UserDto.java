@@ -66,4 +66,11 @@ public class UserDto {
 	public void setUserTel(String userTel) {
 		this.userTel = userTel;
 	}
+
+	@Override
+	public String toString() {
+		return "UserDto [userId=" + userId + ", userPw=" + userPw + ", userNm=" + userNm + ", userAddr=" + userAddr
+				+ ", userTel=" + userTel + "]";
+	}
+	
 }

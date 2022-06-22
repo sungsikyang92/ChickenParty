@@ -55,7 +55,7 @@ table{
 					<c:otherwise>
 						<c:forEach items="${product }" var="dto">
 							<tr>
-								<td>${dto.proKey }</td>
+								<td>${dto.userNm }</td>
 								<td>${dto.proNm }</td>
 								<td>${dto.proNm1 }</td>
 								<td>${dto.proNm2 }</td>
