@@ -32,17 +32,47 @@
             var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
             chart.draw(data, options);
-        }
+        }0
     </script>
+    <style type="text/css">
+    #curve_chart{
+		position: absolute;
+		margin-left: 400px;
+		margin-top:50px;
+	}
+	#profit_tb{
+		position: absolute;
+		margin-left: 600px;
+		margin-top:550px;
+	}
+	#location_list{
+	 font-weight: bolder;
+	 font-size: 20px;
+	 position: absolute;
+	 margin-top: 30px;
+	 margin-left: 450px;
+	}
+    #drop_btn{
+	position: absolute;
+	margin-left: 530px;
+    }
+    
+    #store_profit{
+    position: absolute;
+    margin-left: 630px;
+    margin-top: 600px;
+    }
+    </style>
 <meta charset="UTF-8">
 <title>돈좀벌었나~?</title>
+<%@ include file="./template/header.jsp" %>
+ <%@ include file="./template/navbar.jsp" %>
+<span id="location_list" style="text-align: center;">월별매출액</span>
 </head>
 <body>
-	<table border="1">
+	<table border="1" id="store_profit">
 		<col width="1">
 		<col width="50">
-		<col width="100">
-		<col width="200">
 		<tr>
 			<th>STORE</th>
 			<th>PROFIT</th>
@@ -55,14 +85,14 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<div class="container">
+	<div class="container" id="drop_btn">
 		<div class="text-center">
-			<div class="dropdown">
+			<div class="dropdown" >
 				<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
 					id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Month </a>
 
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 					<a class="dropdown-item" href="/profit/getMonthProfit?month=1">January</a>
 					<a class="dropdown-item" href="/profit/getMonthProfit?month=2">February</a> 
 					<a class="dropdown-item" href="/profit/getMonthProfit?month=3">March</a>

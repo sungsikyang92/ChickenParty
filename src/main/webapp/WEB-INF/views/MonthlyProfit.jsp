@@ -44,7 +44,7 @@
 	 position: absolute;
 	 margin-top: 30px;
 	 margin-left: 450px;
-}
+	}
 </style>
     <meta charset="UTF-8">
     <title>돈좀벌었나~?</title>
