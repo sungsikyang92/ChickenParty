@@ -26,4 +26,10 @@ public class ProfitController {
 		model.addAttribute("list", profitService.getProfitByStore());
 		return "ProfitByStore";
 	}
+	
+	@GetMapping("/getMonthProfit")
+	public String getMonthProfit(Model model , int month) {
+		model.addAttribute("list", profitService.getMonthProfit(month));
+		return "ProfitByStore";
+	}
 }

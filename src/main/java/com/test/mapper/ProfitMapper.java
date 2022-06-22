@@ -15,4 +15,7 @@ public interface ProfitMapper {
 	
 	@Select(" SELECT SUM(profit) as profit, userId FROM profit GROUP BY userId ")
 	List<ProfitDto> getProfitByStore();
+	
+	@Select(" SELECT userId, profit FROM profit WHERE month = #{month}")
+	List<ProfitDto> getMonthProfit(int month);
 }

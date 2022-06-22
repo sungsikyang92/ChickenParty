@@ -23,5 +23,10 @@ public class ProfitServiceImpl implements ProfitService{
 	public List<ProfitDto> getProfitByStore() {
 		return profitMapper.getProfitByStore();
 	}
+	
+	@Override
+	public List<ProfitDto> getMonthProfit(int month){
+		return profitMapper.getMonthProfit(month);
+	}
 
 }
