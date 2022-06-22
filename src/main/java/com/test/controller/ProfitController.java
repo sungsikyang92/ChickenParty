@@ -16,20 +16,20 @@ public class ProfitController {
 	private ProfitService profitService;
 	
 	@GetMapping("/getMonthlyProfit")
-	public String getMonthlyProfit(Model model) {
-		model.addAttribute("list", profitService.getMonthlyProfit());
-		return "MonthlyProfit";
+	public String getMonthlyProfit(Model model, String userId) {
+		model.addAttribute("list", profitService.getMonthlyProfit(userId));
+		return "monthlyProfit";
 	}
 	
 	@GetMapping("/getProfitByStore")
 	public String getProfitByStore(Model model) {
 		model.addAttribute("list", profitService.getProfitByStore());
-		return "ProfitByStore";
+		return "profitByStore";
 	}
 	
 	@GetMapping("/getMonthProfit")
 	public String getMonthProfit(Model model , int month) {
 		model.addAttribute("list", profitService.getMonthProfit(month));
-		return "ProfitByStore";
+		return "profitByStore";
 	}
 }

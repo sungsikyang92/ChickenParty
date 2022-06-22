@@ -34,6 +34,7 @@
             chart.draw(data, options);
         }0
     </script>
+    
     <style type="text/css">
     #curve_chart{
 		position: absolute;

@@ -15,8 +15,8 @@ public class ProfitServiceImpl implements ProfitService{
 	private ProfitMapper profitMapper;
 	
 	@Override
-	public List<ProfitDto> getMonthlyProfit() {
-		return profitMapper.getMonthlyProfit();
+	public List<ProfitDto> getMonthlyProfit(String userId) {
+		return profitMapper.getMonthlyProfit(userId);
 	}
 
 	@Override

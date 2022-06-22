@@ -10,8 +10,8 @@ import com.test.dto.ProfitDto;
 @Mapper
 public interface ProfitMapper {
 	
-	@Select(" SELECT month, sum(profit) as profit FROM profit WHERE userId = '1' group by month ORDER By month asc ")
-	List<ProfitDto> getMonthlyProfit();
+	@Select(" SELECT month, sum(profit) as profit FROM profit WHERE userId = #{userId} group by month ORDER By month asc ")
+	List<ProfitDto> getMonthlyProfit(String userId);
 	
 	@Select(" SELECT SUM(profit) as profit, userId FROM profit GROUP BY userId ")
 	List<ProfitDto> getProfitByStore();
