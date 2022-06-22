@@ -94,18 +94,18 @@
 					aria-expanded="false"> Month </a>
 
 				<div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=1">January</a>
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=2">February</a> 
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=3">March</a>
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=4">April</a>
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=5">May</a> 
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=6">June</a>
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=7">July</a>
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=8">August</a> 
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=9">September</a>
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=10">October</a>
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=11">November</a> 
-					<a class="dropdown-item" href="/profit/getMonthProfit?month=12">December</a>
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=1&userId=${param.userId }">January</a>
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=2&userId=${param.userId }">February</a> 
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=3&userId=${param.userId }">March</a>
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=4&userId=${param.userId }">April</a>
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=5&userId=${param.userId }">May</a> 
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=6&userId=${param.userId }">June</a>
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=7&userId=${param.userId }">July</a>
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=8&userId=${param.userId }">August</a> 
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=9&userId=${param.userId }">September</a>
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=10&userId=${param.userId }">October</a>
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=11&userId=${param.userId }">November</a> 
+					<a class="dropdown-item" href="/profit/getMonthProfit?month=12&userId=${param.userId }">December</a>
 				</div>
 			</div>
 		</div>

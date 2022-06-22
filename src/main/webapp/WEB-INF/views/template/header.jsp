@@ -17,7 +17,8 @@
 </head>
 <body>
 <div id='logo'>
-	<img alt="치킨파티" src="https://img.freepik.com/free-vector/cute-chicken-rooster-logo-icon-illustration_7688-1856.jpg">
+	<a href="/board/boardList?userId=${param.userId}&userNm=${param.userNm}"><img alt="치킨파티" src="https://img.freepik.com/free-vector/cute-chicken-rooster-logo-icon-illustration_7688-1856.jpg">
+</a>
 </div>
 </body>
 </html>

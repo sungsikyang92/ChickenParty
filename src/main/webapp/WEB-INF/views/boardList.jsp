@@ -51,7 +51,7 @@ tr{
  <%@ include file="./template/navbar.jsp" %>
 <span id="location_list" style="text-align: center;">공지사항</span>
 <div id="main_div">
-	<table border="1" class="table table-condensed table-bordered table-hover" method="post">
+	<table border="1" class="table table-condensed table-bordered table-hover">
 		<tr>	
 			<th>MYNO</th>
 			<th>MYTITLE</th>

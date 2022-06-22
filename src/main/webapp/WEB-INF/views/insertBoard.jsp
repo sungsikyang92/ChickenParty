@@ -13,11 +13,15 @@
 	margin-left: 400px;
 	margin-top: 200px;
 }
-table{
-	margin-left: 150px;
-}
+
 textarea {
 	border-style: none;
+}
+#chainTbl{
+	position: absolute;
+	margin-left: 450px;
+	margin-top: 80px;
+	width: 1300px;
 }
 </style>
 </head>
@@ -25,11 +29,10 @@ textarea {
 	<%@ include file="./template/header.jsp"%>
 	 <%@ include file="./template/navbar.jsp"%>
 
-	<div id="main_div">
 	<form action="insertBoard" method="post">
 		<input type="hidden" name=userId value="${param.userId}">
-		<table border="1"
-			class="table table-condensed table-bordered table-hover">
+		<table border="1" id="chainTbl"
+			class="table table-bordered table-hover">
 			<tr>
 				<th>공지사항 제목</th>
 				<td><input type="text" name="boardTitle"></td>
@@ -46,6 +49,5 @@ textarea {
 			</tr>
 		</table>
 </form>
-	</div>
 </body>
 </html>

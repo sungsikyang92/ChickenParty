@@ -7,16 +7,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+ <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<style>
+
+#location_list{
+	 font-weight: bolder;
+	 font-size: 20px;
+	 position: absolute;
+	 margin-top: 30px;
+	 margin-left: 450px;
+}
+#chainTbl{
+	position: absolute;
+	margin-left: 450px;
+	margin-top: 80px;
+	width: 1000px;
+}
+
+#nameTh{
+	width:150px;
+}
+#addrTh{
+	width: 100px;
+}
+#telTh{
+	width: 100px;
+}
+</style>
 </head>
 <body>
 <%@ include file="./template/header.jsp" %>
  <%@ include file="./template/navbar.jsp" %>
-<h1>LIST PAGE</h1>
-<table border="1">
+<span id="location_list" style="text-align: center;">체인점</span>
+<table id="chainTbl" border="1" class="table table-bordered table-hover">
 	<tr>
-		<th>NAME</th>
-		<th>ADDR</th>
-		<th>TEL</th>
+		<th id="nameTh">가게명</th>
+		<th id="addrTh">주소</th>
+		<th id="telTh">전화번호</th>
 	</tr>
 <c:forEach items="${list }" var="dto">
 		<tr>
@@ -26,11 +54,7 @@
 			
 		</tr>
 </c:forEach>
-	<tr>
-		<td colspan="3" align="right">
-			<button onclick="location.href='welcome'">뒤로가기</button>
-		</td>
-	</tr>
+
 </table>
 </body>
 </html>

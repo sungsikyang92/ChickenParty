@@ -28,7 +28,7 @@ public class UserController {
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String welcomePage(ModelMap model, UserDto dto) {
 		if(dto.getUserId().equals("admin")&&dto.getUserPw().equals("1234")) {
-			return "redirect:welcome?userId=admin";
+			return "redirect:welcome?userId=admin&userNm=storeA";
 		}
 		if(dto.getUserId().equals("user1")&&dto.getUserPw().equals("1234")) {
 			UserDto test = userService.infoChain(dto.getUserId());

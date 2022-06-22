@@ -12,10 +12,13 @@
 <title>Insert title here</title>
 <style type="text/css">
 table{
-	margin-left:50px;
+	margin-left:150px;
 	margin-top:50px;
-	width: 500px;
-	
+	width: 600px;
+	position: absolute;
+}
+tr{
+	width: 100px;
 }
 #location_list{
 	 font-weight: bolder;
@@ -24,6 +27,13 @@ table{
 	 margin-top: 30px;
 	 margin-left: 450px;
 }
+#chainTbl{
+	position: absolute;
+	margin-left: 450px;
+	margin-top: 80px;
+	width: 1300px;
+}
+
 </style>
 </head>
 <body>
@@ -31,8 +41,7 @@ table{
  <%@ include file="./template/navbar.jsp" %>
 
 	<span id="location_list" style="text-align: center;">지점별 주문 현황</span>
-	<div class="container">
-		<table class="table table-striped">
+		<table id="chainTbl" class="table table-striped">
 			<thead>
 				<tr>
 					<th scope="col">체인점</th>
@@ -71,7 +80,6 @@ table{
 				</c:choose>
 			</tbody>
 		</table>
-	</div>
 	
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
